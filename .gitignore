@@ -13,3 +13,4 @@ node_modules/
 # Performance test output
 /perf-results/
 /playwright-report-perf/
+/playwright-report-uat/

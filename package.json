@@ -8,11 +8,18 @@
     "test:perf": "playwright test -c playwright.perf.config.ts",
     "perf:summary": "node scripts/perf-summary.mjs",
     "login": "node login-capture.js",
-    "load-test": "node load-test.mjs"
+    "load-test": "node load-test.mjs",
+    "test:uat": "playwright test -c playwright.uat.config.ts --project=uat-chromium --project=uat-firefox --project=uat-webkit --project=uat-setup --project=uat-signed-in --project=uat-logout",
+    "test:uat:public": "playwright test -c playwright.uat.config.ts --project=uat-chromium --project=uat-firefox --project=uat-webkit",
+    "test:uat:signed-in": "playwright test -c playwright.uat.config.ts --project=uat-setup --project=uat-signed-in",
+    "test:uat:all-pages": "playwright test -c playwright.uat.config.ts --project=uat-setup --project=uat-all-pages",
+    "login:uat": "node login-capture.js https://uat.leecycle.dev .auth/uat-state.json",
+    "uat:map-routes": "node scripts/uat-map-routes.js"
   },
   "keywords": [],
   "type": "commonjs",
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.1"
   }

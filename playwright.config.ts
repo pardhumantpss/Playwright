@@ -13,8 +13,8 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  /* Performance tests have their own config: playwright.perf.config.ts */
-  testIgnore: '**/perf/**',
+  /* Performance and UAT tests have their own configs: playwright.perf.config.ts, playwright.uat.config.ts */
+  testIgnore: ['**/perf/**', '**/uat/**'],
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */

@@ -1,0 +1,52 @@
+name: UAT Tests
+# Functional tests for https://uat.leecycle.dev.
+# Signed-out tests always run. Signed-in tests run only when the repository has the
+# secrets UAT_EMAIL and UAT_PASSWORD (a dedicated test account); otherwise they skip.
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 3 * * *' # daily at 08:30 IST
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: 'Which tests to run'
+        type: choice
+        options:
+          - standard (signed-out + signed-in)
+          - all pages (every menu page, ~20 min)
+          - signed-out only
+        default: standard (signed-out + signed-in)
+concurrency:
+  group: uat-tests
+  cancel-in-progress: false
+jobs:
+  uat:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    env:
+      UAT_EMAIL: ${{ secrets.UAT_EMAIL }}
+      UAT_PASSWORD: ${{ secrets.UAT_PASSWORD }}
+      SUITE: ${{ inputs.suite || 'standard (signed-out + signed-in)' }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install browsers
+      run: npx playwright install --with-deps
+    - name: Run UAT tests
+      run: |
+        case "$SUITE" in
+          all*)        npm run test:uat:all-pages ;;
+          signed-out*) npm run test:uat:public ;;
+          *)           npm run test:uat ;;
+        esac
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: uat-report
+        path: playwright-report-uat/
+        retention-days: 30

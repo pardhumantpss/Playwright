@@ -1,0 +1,2989 @@
+{
+ "generated": "2026-09-25",
+ "base": "https://uat.leecycle.dev",
+ "count": 497,
+ "routes": [
+  {
+   "tab": "Home",
+   "module": "Workspace",
+   "page": "Workspace Directory",
+   "path": "/leeact/workspace/workspace-directory"
+  },
+  {
+   "tab": "Home",
+   "module": "Workspace",
+   "page": "Overview",
+   "path": "/leeact/workspace/overview"
+  },
+  {
+   "tab": "Home",
+   "module": "Workspace",
+   "page": "Calendar",
+   "path": "/leeact/workspace/calendar"
+  },
+  {
+   "tab": "Home",
+   "module": "Workspace",
+   "page": "Announcements",
+   "path": "/leeact/workspace/announcements"
+  },
+  {
+   "tab": "Home",
+   "module": "Projects",
+   "page": "All Projects",
+   "path": "/leeact/projects/all-projects"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Overview",
+   "path": "/leeact/project-details/overview"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Scope",
+   "path": "/leeact/project-details/scope"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Milestones",
+   "path": "/leeact/project-details/milestones"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Sprints",
+   "path": "/leeact/project-details/sprints"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Boards",
+   "path": "/leeact/project-details/boards"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Tasks",
+   "path": "/leeact/project-details/tasks"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Files",
+   "path": "/leeact/project-details/files"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Risks",
+   "path": "/leeact/project-details/risks"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Issues",
+   "path": "/leeact/project-details/issues"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Notes",
+   "path": "/leeact/project-details/notes"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Changes",
+   "path": "/leeact/project-details/changes"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Dependencies",
+   "path": "/leeact/project-details/dependencies"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Meetings",
+   "path": "/leeact/project-details/meetings"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Teams",
+   "path": "/leeact/project-details/teams"
+  },
+  {
+   "tab": "Home",
+   "module": "Project Details",
+   "page": "Epics",
+   "path": "/leeact/project-details/epics"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Teams",
+   "path": "/leeact/resources/teams"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Directory",
+   "path": "/leeact/resources/directory"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Scheduling",
+   "path": "/leeact/resources/scheduling"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Pool",
+   "path": "/leeact/resources/pool"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Rate",
+   "path": "/leeact/resources/rate"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Rate Card",
+   "path": "/leeact/resources/rate-card"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Skill",
+   "path": "/leeact/resources/skill"
+  },
+  {
+   "tab": "Home",
+   "module": "Resources",
+   "page": "Shift",
+   "path": "/leeact/resources/shift"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Retrospective",
+   "path": "/leeact/productivity/retrospective"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Feed",
+   "path": "/leeact/productivity/feed"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Timelogs",
+   "path": "/leeact/productivity/timelogs"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Timesheets",
+   "path": "/leeact/productivity/timesheets"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "EOD Status",
+   "path": "/leeact/productivity/eod"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Velocity",
+   "path": "/leeact/productivity/velocity"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Throughput",
+   "path": "/leeact/productivity/throughput"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Cycle Time",
+   "path": "/leeact/productivity/cycle-time"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Compliance Rules",
+   "path": "/leeact/productivity/compliance-rules"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Compliance Flags",
+   "path": "/leeact/productivity/compliance-flags"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Project Daily Summary",
+   "path": "/leeact/productivity/project-daily-summary"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Workspace Weekly Summary",
+   "path": "/leeact/productivity/workspace-weekly-summary"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "User Daily Summary",
+   "path": "/leeact/productivity/user-daily-summary"
+  },
+  {
+   "tab": "Home",
+   "module": "Productivity",
+   "page": "Timesheet Policy",
+   "path": "/leeact/productivity/timesheet-policy"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Budgets",
+   "path": "/leeact/finance/budgets"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Estimates",
+   "path": "/leeact/finance/estimates"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Change Orders",
+   "path": "/leeact/finance/change-orders"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Purchase Orders",
+   "path": "/leeact/finance/purchase-orders"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Vendors",
+   "path": "/leeact/finance/vendors"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Expenses",
+   "path": "/leeact/finance/expenses"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Invoices",
+   "path": "/leeact/finance/invoices"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Payments",
+   "path": "/leeact/finance/payments"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Reconcile",
+   "path": "/leeact/finance/reconcile"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Cost Capture",
+   "path": "/leeact/finance/cost-capture"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Burn Rate",
+   "path": "/leeact/finance/burn-rate"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Forecast",
+   "path": "/leeact/finance/forecast"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Profit",
+   "path": "/leeact/finance/profit"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Receivables",
+   "path": "/leeact/finance/receivables"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Trends",
+   "path": "/leeact/finance/trends"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "COGS",
+   "path": "/leeact/finance/cogs"
+  },
+  {
+   "tab": "Home",
+   "module": "Finance",
+   "page": "Variance",
+   "path": "/leeact/finance/variance"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Policies",
+   "path": "/leeact/compliance/policies"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Training",
+   "path": "/leeact/compliance/training"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Inspections",
+   "path": "/leeact/compliance/inspections"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Incidents",
+   "path": "/leeact/compliance/incidents"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Waste Logs",
+   "path": "/leeact/compliance/waste-logs"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Permits",
+   "path": "/leeact/compliance/permits"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Manifests",
+   "path": "/leeact/compliance/manifests"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Documents",
+   "path": "/leeact/compliance/documents"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "UAT",
+   "path": "/leeact/compliance/uat"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Dashboard",
+   "path": "/leeact/compliance/dashboard"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Audits",
+   "path": "/leeact/compliance/audits"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Waste",
+   "path": "/leeact/compliance/waste"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Privacy",
+   "path": "/leeact/compliance/privacy"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Frameworks",
+   "path": "/leeact/compliance/frameworks"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Checklists",
+   "path": "/leeact/compliance/checklists"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Thresholds",
+   "path": "/leeact/compliance/thresholds"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Retention",
+   "path": "/leeact/compliance/retention"
+  },
+  {
+   "tab": "Home",
+   "module": "Compliance",
+   "page": "Signatures",
+   "path": "/leeact/compliance/signatures"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Entity",
+   "path": "/leeact/settings/entity"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Entity Type",
+   "path": "/leeact/settings/entity-type"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Status Master",
+   "path": "/leeact/settings/status"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Stage Master",
+   "path": "/leeact/settings/stage-master"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Priority",
+   "path": "/leeact/settings/priority"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Reaction",
+   "path": "/leeact/settings/reaction"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Recursive Pattern",
+   "path": "/leeact/settings/recursive-pattern"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Strength",
+   "path": "/leeact/settings/strength"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Severity",
+   "path": "/leeact/settings/severity"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Confidence Level",
+   "path": "/leeact/settings/confidence-level"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Impact Area",
+   "path": "/leeact/settings/impact-area"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Scope Template",
+   "path": "/leeact/settings/scope-template"
+  },
+  {
+   "tab": "Home",
+   "module": "Settings",
+   "page": "Leeact App Setting",
+   "path": "/leeact/settings/leeact-app-setting"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Warehouse",
+   "page": "Field Types",
+   "path": "/service-studio/field-warehouse/field-types"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Warehouse",
+   "page": "Fields Warehouse",
+   "path": "/service-studio/field-warehouse/warehouse-fields"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Warehouse",
+   "page": "Section Prepost",
+   "path": "/service-studio/field-warehouse/section-pre-post-fix"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Warehouse",
+   "page": "Modules",
+   "path": "/service-studio/field-warehouse/module-registry"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Templates",
+   "page": "My Field Templates",
+   "path": "/service-studio/field-templates/my-field-templates"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Templates",
+   "page": "Sync from Warehouse",
+   "path": "/service-studio/field-templates/sync-from-warehouse"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Templates",
+   "page": "Template Overrides",
+   "path": "/service-studio/field-templates/template-overrides"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Field Templates",
+   "page": "Field Version History",
+   "path": "/service-studio/field-templates/field-version-history"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Builder",
+   "page": "Services",
+   "path": "/service-studio/service-builder/services"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Builder",
+   "page": "Steps & Ordering",
+   "path": "/service-studio/service-builder/steps-ordering"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Builder",
+   "page": "Step Sections",
+   "path": "/service-studio/service-builder/step-sections"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Builder",
+   "page": "Section Dependencies",
+   "path": "/service-studio/service-builder/section-dependencies"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Builder",
+   "page": "Section Panels",
+   "path": "/service-studio/service-builder/section-panels"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Form Builder",
+   "page": "Form Builder",
+   "path": "/service-studio/form-builder"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Logic & Triggers",
+   "page": "Logic & Triggers",
+   "path": "/service-studio/logic-triggers"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Execution Config",
+   "page": "Execution Config",
+   "path": "/service-studio/execution-config"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Logs & Audits",
+   "page": "Logs & Audits",
+   "path": "/service-studio/logs-audits"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "Testing & QA",
+   "page": "Testing & QA",
+   "path": "/service-studio/testing-qa"
+  },
+  {
+   "tab": "Service Studio",
+   "module": "System Settings",
+   "page": "left ss system menu",
+   "path": "/service-studio/system-settings/left-ss-system-menu"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Dashboard",
+   "page": "Dashboard",
+   "path": "/access-control/dashboard"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Subjects",
+   "page": "Roles",
+   "path": "/access-control/subjects/roles"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Subjects",
+   "page": "Subject Assignment",
+   "path": "/access-control/subjects/subject-assignment"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Subjects",
+   "page": "Subject Browser",
+   "path": "/access-control/subjects/subject-browser"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Modules Registry",
+   "path": "/access-control/resources/modules-registry"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Sections Registry",
+   "path": "/access-control/resources/sections-registry"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Fields Registry",
+   "path": "/access-control/resources/fields-registry"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Endpoints Registry",
+   "path": "/access-control/resources/endpoints-registry"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Page Registry",
+   "path": "/access-control/resources/page-registry"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Methods",
+   "path": "/access-control/resources/methods"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Menus Registry",
+   "path": "/access-control/resources/menus-registry"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "All Resources",
+   "path": "/access-control/resources/all-resources"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Page Resources",
+   "path": "/access-control/resources/page-resources"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Page Actions Registry",
+   "path": "/access-control/resources/page-actions-registry"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Resource Types",
+   "path": "/access-control/resources/resource-types"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Resource page types",
+   "path": "/access-control/resources/resource-page-types"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Sensitivity Levels",
+   "path": "/access-control/resources/sensitivity-levels"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Actors",
+   "path": "/access-control/resources/actors"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Page Types",
+   "path": "/access-control/resources/page-types"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Resources",
+   "page": "Resource Types Category",
+   "path": "/access-control/resources/resource-types-category"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Access Request Workflow",
+   "path": "/access-control/workflows/access-request-workflow"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Approval Management",
+   "path": "/access-control/workflows/approval-management"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Lifecycle Automation",
+   "path": "/access-control/workflows/lifecycle-automation"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Workflow Designer",
+   "path": "/access-control/workflows/workflow-designer"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Access Certification",
+   "path": "/access-control/workflows/access-certification"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Temporary Access",
+   "path": "/access-control/workflows/temporary-access"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Workflow Analytics",
+   "path": "/access-control/workflows/workflow-analytics"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Request History",
+   "path": "/access-control/workflows/request-history"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Approval History",
+   "path": "/access-control/workflows/approval-history"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Lifecycle Events",
+   "path": "/access-control/workflows/lifecycle-events"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Certification Reports",
+   "path": "/access-control/workflows/certification-reports"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Request Configuration",
+   "path": "/access-control/workflows/request-configuration"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Approval Settings",
+   "path": "/access-control/workflows/approval-settings"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Lifecycle Rules",
+   "path": "/access-control/workflows/lifecycle-rules"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Workflow Templates",
+   "path": "/access-control/workflows/workflow-templates"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Workflows",
+   "page": "Notification Settings",
+   "path": "/access-control/workflows/notification-settings"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Analytics",
+   "page": "Access Request Workflow",
+   "path": "/access-control/analytics/access-request-workflow"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Analytics",
+   "page": "Approval Management",
+   "path": "/access-control/analytics/approval-management"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Analytics",
+   "page": "Lifecycle Automation",
+   "path": "/access-control/analytics/lifecycle-automation"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Analytics",
+   "page": "Workflow Designer",
+   "path": "/access-control/analytics/workflow-designer"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Analytics",
+   "page": "Access Certification",
+   "path": "/access-control/analytics/access-certification"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Analytics",
+   "page": "Temporary Access",
+   "path": "/access-control/analytics/temporary-access"
+  },
+  {
+   "tab": "Access Control",
+   "module": "Settings",
+   "page": "Settings",
+   "path": "/access-control/settings"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Users Directory",
+   "path": "/governance/directory-subjects/users-directory"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Teams Directory",
+   "path": "/governance/directory-subjects/teams-directory"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Manage Departments",
+   "path": "/governance/directory-subjects/manage-departments"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Departments Directory",
+   "path": "/governance/directory-subjects/departments-directory"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Designations Directory",
+   "path": "/governance/directory-subjects/designations-directory"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Reporting Hierarchy",
+   "path": "/governance/directory-subjects/reporting-hierarchy"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Reporting Relationship Types",
+   "path": "/governance/directory-subjects/reporting-relationship-types"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Department Type",
+   "path": "/governance/directory-subjects/department-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Team Type",
+   "path": "/governance/directory-subjects/team-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Department Document Type",
+   "path": "/governance/directory-subjects/department-document-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Position",
+   "path": "/governance/directory-subjects/position"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Category",
+   "path": "/governance/directory-subjects/category"
+  },
+  {
+   "tab": "Governance",
+   "module": "Directory & Subjects",
+   "page": "Cost Center",
+   "path": "/governance/directory-subjects/cost-center"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Company Profile",
+   "path": "/governance/organization-setup/company-profile"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Subsidiaries/Entities",
+   "path": "/governance/organization-setup/subsidiaries-entities"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Cost Centers",
+   "path": "/governance/organization-setup/cost-centers"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Org Naming Conventions",
+   "path": "/governance/organization-setup/org-naming-conventions"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Org Chart",
+   "path": "/governance/organization-setup/org-chart"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Reporting Lines",
+   "path": "/governance/organization-setup/reporting-lines"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Succession Setup",
+   "path": "/governance/organization-setup/succession-setup"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Company Type",
+   "path": "/governance/organization-setup/company-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Hierarchy Level",
+   "path": "/governance/organization-setup/hierarchy-level"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Relationship Type",
+   "path": "/governance/organization-setup/relationship-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "License Type",
+   "path": "/governance/organization-setup/license-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Permit Type",
+   "path": "/governance/organization-setup/permit-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Organization Setup",
+   "page": "Certification Type",
+   "path": "/governance/organization-setup/certification-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Menus",
+   "path": "/governance/settings/menus"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Account",
+   "path": "/governance/settings/account"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Account Contact Type",
+   "path": "/governance/settings/account-contact-type"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Account Contact",
+   "path": "/governance/settings/account-contact"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Notification",
+   "path": "/governance/settings/notification"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Languages",
+   "path": "/governance/settings/languages"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Countries",
+   "path": "/governance/settings/countries"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Industry",
+   "path": "/governance/settings/industry"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Genders",
+   "path": "/governance/settings/genders"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Currencies",
+   "path": "/governance/settings/currencies"
+  },
+  {
+   "tab": "Governance",
+   "module": "Settings",
+   "page": "Payment Method",
+   "path": "/governance/settings/payment-method"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dashboards",
+   "page": "Upcoming Dashboard",
+   "path": "/tenants/dashboards/upcoming-dashboard"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Directory",
+   "path": "/tenants/tenants-directory/directory"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Contacts",
+   "path": "/tenants/tenants-directory/contacts"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Users",
+   "path": "/tenants/tenants-directory/users"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Environments",
+   "path": "/tenants/tenants-directory/environments"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Entitlements",
+   "path": "/tenants/tenants-directory/entitlements"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Domains",
+   "path": "/tenants/tenants-directory/domains"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Support Plan",
+   "path": "/tenants/tenants-directory/support-plan"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Notes & Files",
+   "path": "/tenants/tenants-directory/notes-files"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Impersonate (View-as)",
+   "path": "/tenants/tenants-directory/impersonate"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Suspend / Resume",
+   "path": "/tenants/tenants-directory/suspend-resume"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Offboard",
+   "path": "/tenants/tenants-directory/offboard"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Feedback",
+   "path": "/tenants/tenants-directory/feedback"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Status Mix",
+   "path": "/tenants/tenants-directory/status-mix"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Activation",
+   "path": "/tenants/tenants-directory/activation"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Adoption",
+   "path": "/tenants/tenants-directory/adoption"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Suspensions",
+   "path": "/tenants/tenants-directory/suspensions"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Cohorts",
+   "path": "/tenants/tenants-directory/cohorts"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Health Score",
+   "path": "/tenants/tenants-directory/health-score"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Churn Risk",
+   "path": "/tenants/tenants-directory/churn-risk"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Onboarding",
+   "path": "/tenants/tenants-directory/onboarding"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Status Types",
+   "path": "/tenants/tenants-directory/status-types"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Contact Types",
+   "path": "/tenants/tenants-directory/contact-types"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Support Tiers",
+   "path": "/tenants/tenants-directory/support-tiers"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Industries",
+   "path": "/tenants/tenants-directory/industries"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Domain Rules",
+   "path": "/tenants/tenants-directory/domain-rules"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Offboarding Policies",
+   "path": "/tenants/tenants-directory/offboarding-policies"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Impersonation Policy",
+   "path": "/tenants/tenants-directory/impersonation-policy"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Tenant Statuses",
+   "path": "/tenants/tenants-directory/tenant-statuses"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Tenants Directory",
+   "page": "Tenant Types",
+   "path": "/tenants/tenants-directory/tenant-types"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Subs List",
+   "path": "/tenants/subscriptions/subs-list"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Subs Detail",
+   "path": "/tenants/subscriptions/subs-detail"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Renewals",
+   "path": "/tenants/subscriptions/renewals"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Changes",
+   "path": "/tenants/subscriptions/changes"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Promotions",
+   "path": "/tenants/subscriptions/promotions"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Partner Plans",
+   "path": "/tenants/subscriptions/partner-plans"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "MRR/ARR",
+   "path": "/tenants/subscriptions/mrr-arr"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Churn",
+   "path": "/tenants/subscriptions/churn"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Trials",
+   "path": "/tenants/subscriptions/trials"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Forecast",
+   "path": "/tenants/subscriptions/forecast"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Cohorts",
+   "path": "/tenants/subscriptions/cohorts"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Cycles",
+   "path": "/tenants/subscriptions/cycles"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Proration",
+   "path": "/tenants/subscriptions/proration"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Alignment",
+   "path": "/tenants/subscriptions/alignment"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Cancel Reasons",
+   "path": "/tenants/subscriptions/cancel-reasons"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Discounts",
+   "path": "/tenants/subscriptions/discounts"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Price Books",
+   "path": "/tenants/subscriptions/price-books"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Entitlement Mapping",
+   "path": "/tenants/subscriptions/entitlement-mapping"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Subscriptions",
+   "page": "Plans",
+   "path": "/tenants/subscriptions/plans"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Invoices",
+   "path": "/tenants/invoices/invoices"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Runs",
+   "path": "/tenants/invoices/runs"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Inv Detail",
+   "path": "/tenants/invoices/inv-detail"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Credit Notes",
+   "path": "/tenants/invoices/credit-notes"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Refunds",
+   "path": "/tenants/invoices/refunds"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "AR Aging",
+   "path": "/tenants/invoices/ar-aging"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Tax Report",
+   "path": "/tenants/invoices/tax-report"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Inv Status",
+   "path": "/tenants/invoices/inv-status"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Collections",
+   "path": "/tenants/invoices/collections"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Multi-Currency",
+   "path": "/tenants/invoices/multi-currency"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Numbering",
+   "path": "/tenants/invoices/numbering"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Terms",
+   "path": "/tenants/invoices/terms"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Tax Setup",
+   "path": "/tenants/invoices/tax-setup"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Templates",
+   "path": "/tenants/invoices/templates"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Currencies",
+   "path": "/tenants/invoices/currencies"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Invoices",
+   "page": "Fiscal Calendar",
+   "path": "/tenants/invoices/fiscal-calendar"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Payments",
+   "path": "/tenants/payments/payments"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Credits",
+   "path": "/tenants/payments/credits"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Retries",
+   "path": "/tenants/payments/retries"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Reconcile",
+   "path": "/tenants/payments/reconcile"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Gateway",
+   "path": "/tenants/payments/gateway"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Webhooks",
+   "path": "/tenants/payments/webhooks"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "DSO",
+   "path": "/tenants/payments/dso"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Success Rate",
+   "path": "/tenants/payments/success-rate"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Chargebacks",
+   "path": "/tenants/payments/chargebacks"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Cash Flow",
+   "path": "/tenants/payments/cash-flow"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Connectors",
+   "path": "/tenants/payments/connectors"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Pay Types",
+   "path": "/tenants/payments/pay-types"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Receipts",
+   "path": "/tenants/payments/receipts"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Routing",
+   "path": "/tenants/payments/routing"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Risk Rules",
+   "path": "/tenants/payments/risk-rules"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Payments",
+   "page": "Payout Calendars",
+   "path": "/tenants/payments/payout-calendars"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Queue",
+   "path": "/tenants/dunning-queue/queue"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Reminders",
+   "path": "/tenants/dunning-queue/reminders"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Suspend",
+   "path": "/tenants/dunning-queue/suspend"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Recovery",
+   "path": "/tenants/dunning-queue/recovery"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Stage Time",
+   "path": "/tenants/dunning-queue/stage-time"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Aging",
+   "path": "/tenants/dunning-queue/aging"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Policies",
+   "path": "/tenants/dunning-queue/policies"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Templates",
+   "path": "/tenants/dunning-queue/templates"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Dunning Queue",
+   "page": "Escalation Rules",
+   "path": "/tenants/dunning-queue/escalation-rules"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Catalog",
+   "path": "/tenants/product-catalog/catalog"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Prod Detail",
+   "path": "/tenants/product-catalog/prod-detail"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Prices",
+   "path": "/tenants/product-catalog/prices"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Discounts",
+   "path": "/tenants/product-catalog/discounts"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Meters",
+   "path": "/tenants/product-catalog/meters"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Meter Detail",
+   "path": "/tenants/product-catalog/meter-detail"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Events",
+   "path": "/tenants/product-catalog/events"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Ingestion",
+   "path": "/tenants/product-catalog/ingestion"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Rating",
+   "path": "/tenants/product-catalog/rating"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Performance",
+   "path": "/tenants/product-catalog/performance"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Usage",
+   "path": "/tenants/product-catalog/usage"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Price Books",
+   "path": "/tenants/product-catalog/price-books"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Anomalies",
+   "path": "/tenants/product-catalog/anomalies"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Prod Types",
+   "path": "/tenants/product-catalog/prod-types"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Charges",
+   "path": "/tenants/product-catalog/charges"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "UOM",
+   "path": "/tenants/product-catalog/uom"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Aggregations",
+   "path": "/tenants/product-catalog/aggregations"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Resets",
+   "path": "/tenants/product-catalog/resets"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "Tax Codes",
+   "path": "/tenants/product-catalog/tax-codes"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "GL Codes",
+   "path": "/tenants/product-catalog/gl-codes"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Product Catalog",
+   "page": "RevRec Rules",
+   "path": "/tenants/product-catalog/revrec-rules"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Meters",
+   "path": "/tenants/usage-metering/meters"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Event Explorer",
+   "path": "/tenants/usage-metering/event-explorer"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Backfill",
+   "path": "/tenants/usage-metering/backfill"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Reconciliation",
+   "path": "/tenants/usage-metering/reconciliation"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Tenant Usage",
+   "path": "/tenants/usage-metering/tenant-usage"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Anomaly Detection",
+   "path": "/tenants/usage-metering/anomaly-detection"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Coverage",
+   "path": "/tenants/usage-metering/coverage"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Metric Definitions",
+   "path": "/tenants/usage-metering/metric-definitions"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Aggregation Windows",
+   "path": "/tenants/usage-metering/aggregation-windows"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Retention",
+   "path": "/tenants/usage-metering/retention"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Usage & Metering",
+   "page": "Sources",
+   "path": "/tenants/usage-metering/sources"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Resource Registry",
+   "path": "/tenants/servers-infrastructure/resource-registry"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Discovery",
+   "path": "/tenants/servers-infrastructure/discovery"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Cost Tags",
+   "path": "/tenants/servers-infrastructure/cost-tags"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Capacity Plans",
+   "path": "/tenants/servers-infrastructure/capacity-plans"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Maintenance Windows",
+   "path": "/tenants/servers-infrastructure/maintenance-windows"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Incidents",
+   "path": "/tenants/servers-infrastructure/incidents"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Cost by Tenant",
+   "path": "/tenants/servers-infrastructure/cost-by-tenant"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Resource Inventory",
+   "path": "/tenants/servers-infrastructure/resource-inventory"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Utilization",
+   "path": "/tenants/servers-infrastructure/utilization"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Egress & CDN",
+   "path": "/tenants/servers-infrastructure/egress-cdn"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "SLA Attainment",
+   "path": "/tenants/servers-infrastructure/sla-attainment"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Incident Metrics",
+   "path": "/tenants/servers-infrastructure/incident-metrics"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Providers",
+   "path": "/tenants/servers-infrastructure/providers"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Tag Policies",
+   "path": "/tenants/servers-infrastructure/tag-policies"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Naming Rules",
+   "path": "/tenants/servers-infrastructure/naming-rules"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Quotas",
+   "path": "/tenants/servers-infrastructure/quotas"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Servers / Infrastructure",
+   "page": "Thresholds",
+   "path": "/tenants/servers-infrastructure/thresholds"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "Tickets",
+   "path": "/tenants/support-slas/tickets"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "Escalations",
+   "path": "/tenants/support-slas/escalations"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "SLOs",
+   "path": "/tenants/support-slas/slos"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "SLA Performance",
+   "path": "/tenants/support-slas/sla-performance"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "Backlog",
+   "path": "/tenants/support-slas/backlog"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "Deflection",
+   "path": "/tenants/support-slas/deflection"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "SLA Templates",
+   "path": "/tenants/support-slas/sla-templates"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Support & SLAs",
+   "page": "Escalation Matrix",
+   "path": "/tenants/support-slas/escalation-matrix"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "Connectors",
+   "path": "/tenants/integrations-connectors/connectors"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "API Keys",
+   "path": "/tenants/integrations-connectors/api-keys"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "Webhooks",
+   "path": "/tenants/integrations-connectors/webhooks"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "Delivery Logs",
+   "path": "/tenants/integrations-connectors/delivery-logs"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "Connector Health",
+   "path": "/tenants/integrations-connectors/connector-health"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "Delivery Failures",
+   "path": "/tenants/integrations-connectors/delivery-failures"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "Endpoints",
+   "path": "/tenants/integrations-connectors/endpoints"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "Retry Policy",
+   "path": "/tenants/integrations-connectors/retry-policy"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Integrations & Connectors",
+   "page": "IP Rules",
+   "path": "/tenants/integrations-connectors/ip-rules"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Compliance & Audit",
+   "page": "Audit Log",
+   "path": "/tenants/compliance-audit/audit-log"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Compliance & Audit",
+   "page": "Data Requests",
+   "path": "/tenants/compliance-audit/data-requests"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Compliance & Audit",
+   "page": "Legal Holds",
+   "path": "/tenants/compliance-audit/legal-holds"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Compliance & Audit",
+   "page": "Access Review",
+   "path": "/tenants/compliance-audit/access-review"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Compliance & Audit",
+   "page": "Change History",
+   "path": "/tenants/compliance-audit/change-history"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Compliance & Audit",
+   "page": "Retention",
+   "path": "/tenants/compliance-audit/retention"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Compliance & Audit",
+   "page": "Privacy Policies",
+   "path": "/tenants/compliance-audit/privacy-policies"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Data & Backups",
+   "page": "Backups",
+   "path": "/tenants/data-backups/backups"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Data & Backups",
+   "page": "Restore Tests",
+   "path": "/tenants/data-backups/restore-tests"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Data & Backups",
+   "page": "Exports",
+   "path": "/tenants/data-backups/exports"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Data & Backups",
+   "page": "RPO / RTO",
+   "path": "/tenants/data-backups/rpo-rto"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Data & Backups",
+   "page": "Backup Health",
+   "path": "/tenants/data-backups/backup-health"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Data & Backups",
+   "page": "Retention",
+   "path": "/tenants/data-backups/retention"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Communications",
+   "page": "Announcements",
+   "path": "/tenants/communications/announcements"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Communications",
+   "page": "Email/SMS",
+   "path": "/tenants/communications/email-sms"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Communications",
+   "page": "Surveys",
+   "path": "/tenants/communications/surveys"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Communications",
+   "page": "Engagement",
+   "path": "/tenants/communications/engagement"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Communications",
+   "page": "NPS Trends",
+   "path": "/tenants/communications/nps-trends"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Communications",
+   "page": "Templates",
+   "path": "/tenants/communications/templates"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Communications",
+   "page": "Senders",
+   "path": "/tenants/communications/senders"
+  },
+  {
+   "tab": "Tenants",
+   "module": "Settings",
+   "page": "Settings",
+   "path": "/tenants/settings/activities"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "checklists",
+   "path": "/leecycle/service-management/checklists"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Change Reasons",
+   "path": "/leecycle/service-management/change-reasons"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Service Codes",
+   "path": "/leecycle/service-management/service-codes"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "History Types",
+   "path": "/leecycle/service-management/history-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Service status",
+   "path": "/leecycle/service-management/service-status"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Notebook Types",
+   "path": "/leecycle/service-management/notebook-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Proposal Status",
+   "path": "/leecycle/service-management/proposal-status"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Work orders",
+   "path": "/leecycle/service-management/work-orders"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Checklist Templates",
+   "path": "/leecycle/service-management/checklist-templates"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Action Type",
+   "path": "/leecycle/service-management/action-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Service Management",
+   "page": "Service Packages",
+   "path": "/leecycle/service-management/service-packages"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Customers & Sites",
+   "page": "Territory Maps",
+   "path": "/leecycle/customers-sites/territory-maps"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Customers & Sites",
+   "page": "Customer Classes",
+   "path": "/leecycle/customers-sites/customer-classes"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Customers & Sites",
+   "page": "Customer Status",
+   "path": "/leecycle/customers-sites/customer-status"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Customers & Sites",
+   "page": "Portal Config",
+   "path": "/leecycle/customers-sites/portal-config"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Service Contracts",
+   "path": "/leecycle/contracts-pricing/service-contracts"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Franchise Municipal Agreements",
+   "path": "/leecycle/contracts-pricing/franchise-municipal-agreements"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Contract Types",
+   "path": "/leecycle/contracts-pricing/contract-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "SLA Templates",
+   "path": "/leecycle/contracts-pricing/sla-templates"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Escalation Rules",
+   "path": "/leecycle/contracts-pricing/escalation-rules"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Contract Templates",
+   "path": "/leecycle/contracts-pricing/contract-templates"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Approval Rules",
+   "path": "/leecycle/contracts-pricing/approval-rules"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Pricing Configurations",
+   "path": "/leecycle/contracts-pricing/pricing-configurations"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Customer Requirements",
+   "path": "/leecycle/contracts-pricing/customer-requirements"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Amendment Types",
+   "path": "/leecycle/contracts-pricing/amendment-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Contracts & Pricing",
+   "page": "Surcharge Configuration",
+   "path": "/leecycle/contracts-pricing/surcharge-configuration"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Fleet Equipment",
+   "page": "Vehicles",
+   "path": "/leecycle/fleet-equipment/vehicles"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Fleet Equipment",
+   "page": "Survey Templates",
+   "path": "/leecycle/fleet-equipment/survey-templates"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Fleet Equipment",
+   "page": "DVIR Templates",
+   "path": "/leecycle/fleet-equipment/dvir-templates"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Dispatch & Routing",
+   "page": "Scheduled Messages",
+   "path": "/leecycle/dispatch-routing/scheduled-messages"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Dispatch & Routing",
+   "page": "Route Expenses",
+   "path": "/leecycle/dispatch-routing/route-expenses"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Dispatch & Routing",
+   "page": "Routes",
+   "path": "/leecycle/dispatch-routing/routes"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Dispatch & Routing",
+   "page": "Map Areas",
+   "path": "/leecycle/dispatch-routing/map-areas"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Rate Types",
+   "path": "/leecycle/settings/rate-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Code Type",
+   "path": "/leecycle/settings/code-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Equipment Link",
+   "path": "/leecycle/settings/equipment-link"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Equipment Category",
+   "path": "/leecycle/settings/equipment-category"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Operation Setting",
+   "path": "/leecycle/settings/operation-setting"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Proration Type",
+   "path": "/leecycle/settings/proration-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Export Suffix Type",
+   "path": "/leecycle/settings/export-suffix-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Chart Of Accounts",
+   "path": "/leecycle/settings/chart-of-accounts"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Vehicle Type",
+   "path": "/leecycle/settings/vehicle-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Region",
+   "path": "/leecycle/settings/region"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Billing Cycle",
+   "path": "/leecycle/settings/billing-cycle"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Price Modifier",
+   "path": "/leecycle/settings/price-modifier"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Payment Term",
+   "path": "/leecycle/settings/payment-term"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Service Frequency",
+   "path": "/leecycle/settings/service-frequency"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Service Level",
+   "path": "/leecycle/settings/service-level"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Category",
+   "path": "/leecycle/settings/category"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Forecast Category",
+   "path": "/leecycle/settings/forecast-category"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Scope Type",
+   "path": "/leecycle/settings/scope-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Billing Model",
+   "path": "/leecycle/settings/billing-model"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Renewal Policy",
+   "path": "/leecycle/settings/renewal-policy"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Service Action Inventory Impact",
+   "path": "/leecycle/settings/service-action-inventory-impact"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Action Equipment Type",
+   "path": "/leecycle/settings/action-equipment-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Change applicable entity",
+   "path": "/leecycle/settings/change-applicable-entity"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Change type",
+   "path": "/leecycle/settings/change-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Checklist Field Type",
+   "path": "/leecycle/settings/checklist-field-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Data Type",
+   "path": "/leecycle/settings/data-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Equipment Type",
+   "path": "/leecycle/settings/equipment-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Auto Assign Rule",
+   "path": "/leecycle/settings/auto-assign-rule"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Response Time Unit",
+   "path": "/leecycle/settings/response-time-unit"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "SLA Tier",
+   "path": "/leecycle/settings/sla-tier"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Service Quality",
+   "path": "/leecycle/settings/service-quality"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Support Hours",
+   "path": "/leecycle/settings/support-hours"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Communication Level",
+   "path": "/leecycle/settings/communication-level"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Escalation Method",
+   "path": "/leecycle/settings/escalation-method"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Escalation Index Type",
+   "path": "/leecycle/settings/escalation-index-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Escalation Compound Frequency",
+   "path": "/leecycle/settings/escalation-compound-frequency"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Escalation Notification Timing",
+   "path": "/leecycle/settings/escalation-notification-timing"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Field Editability",
+   "path": "/leecycle/settings/field-editability"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Portal Visibility",
+   "path": "/leecycle/settings/portal-visibility"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Approval Trigger",
+   "path": "/leecycle/settings/approval-trigger"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Approval Type",
+   "path": "/leecycle/settings/approval-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Condition Data Type",
+   "path": "/leecycle/settings/condition-data-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Condition Operator",
+   "path": "/leecycle/settings/condition-operator"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Condition Role",
+   "path": "/leecycle/settings/condition-role"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Route Type",
+   "path": "/leecycle/settings/route-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Notebook Field Type",
+   "path": "/leecycle/settings/notebook-field-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Notebook Attachment Requirement",
+   "path": "/leecycle/settings/notebook-attachment-requirement"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Notebook Visibility",
+   "path": "/leecycle/settings/notebook-visibility"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Billing Method",
+   "path": "/leecycle/settings/billing-method"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Disposal Facility Type",
+   "path": "/leecycle/settings/disposal-facility-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Disposal Method",
+   "path": "/leecycle/settings/disposal-method"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Equipment Size",
+   "path": "/leecycle/settings/equipment-size"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Equipment Weight Limit Enforcement",
+   "path": "/leecycle/settings/equipment-weight-limit-enforcement"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Fee Calculation Method",
+   "path": "/leecycle/settings/fee-calculation-method"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Hauler Markup Type",
+   "path": "/leecycle/settings/hauler-markup-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Hazmat Classification",
+   "path": "/leecycle/settings/hazmat-classification"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Material Type",
+   "path": "/leecycle/settings/material-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Overage Policy",
+   "path": "/leecycle/settings/overage-policy"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Placement Option",
+   "path": "/leecycle/settings/placement-option"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Service Type",
+   "path": "/leecycle/settings/service-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Tonnage Weight Limit Enforcement",
+   "path": "/leecycle/settings/tonnage-weight-limit-enforcement"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Weight Measurement Method",
+   "path": "/leecycle/settings/weight-measurement-method"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Customer Requirement Verified By",
+   "path": "/leecycle/settings/customer-requirement-verified-by"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Customer Requirement Verification Frequency",
+   "path": "/leecycle/settings/customer-requirement-verification-frequency"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Approval Level",
+   "path": "/leecycle/settings/approval-level"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Effective Date Rule",
+   "path": "/leecycle/settings/effective-date-rule"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Surcharge Calculation Basis",
+   "path": "/leecycle/settings/surcharge-calculation-basis"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Surcharge Condition Operator",
+   "path": "/leecycle/settings/surcharge-condition-operator"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Surcharge Condition Type",
+   "path": "/leecycle/settings/surcharge-condition-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Surcharge Formula Source Type",
+   "path": "/leecycle/settings/surcharge-formula-source-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Surcharge Frequency",
+   "path": "/leecycle/settings/surcharge-frequency"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Surcharge Trigger Type",
+   "path": "/leecycle/settings/surcharge-trigger-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Equipment Condition",
+   "path": "/leecycle/settings/equipment-condition"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "DVIR Inspection Section",
+   "path": "/leecycle/settings/dvir-inspection-section"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "DVIR Inspection Timing",
+   "path": "/leecycle/settings/dvir-inspection-timing"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "DVIR Response Type",
+   "path": "/leecycle/settings/dvir-response-type"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Agreement Types",
+   "path": "/leecycle/settings/agreement-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Annexation Handlings",
+   "path": "/leecycle/settings/annexation-handlings"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Agreement Renewal Types",
+   "path": "/leecycle/settings/agreement-renewal-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Rate Setting Mechanisms",
+   "path": "/leecycle/settings/rate-setting-mechanisms"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Franchise Fee Bases",
+   "path": "/leecycle/settings/franchise-fee-bases"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Jurisdiction Types",
+   "path": "/leecycle/settings/jurisdiction-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Sectors",
+   "path": "/leecycle/settings/sectors"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Pricing Reference Types",
+   "path": "/leecycle/settings/pricing-reference-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Rate Adjustment Types",
+   "path": "/leecycle/settings/rate-adjustment-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Agreement Fee Types",
+   "path": "/leecycle/settings/agreement-fee-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Agreement Fee Bases",
+   "path": "/leecycle/settings/agreement-fee-bases"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Performance Metrics",
+   "path": "/leecycle/settings/performance-metrics"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Agreement Reporting Frequency",
+   "path": "/leecycle/settings/agreement-reporting-frequency"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Report Formats",
+   "path": "/leecycle/settings/report-formats"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Insurance Coverage Types",
+   "path": "/leecycle/settings/insurance-coverage-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Security Types",
+   "path": "/leecycle/settings/security-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Agreement Amendment Types",
+   "path": "/leecycle/settings/agreement-amendment-types"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "Settings",
+   "page": "Franchise Agreement Tags",
+   "path": "/leecycle/settings/franchise-agreement-tags"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "IoT & Sensors",
+   "page": "Devices",
+   "path": "/leecycle/iot-sensors/devices"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "IoT & Sensors",
+   "page": "Scan Events",
+   "path": "/leecycle/iot-sensors/scan-events"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "IoT & Sensors",
+   "page": "Alerts",
+   "path": "/leecycle/iot-sensors/alerts"
+  },
+  {
+   "tab": "Leecycle",
+   "module": "IoT & Sensors",
+   "page": "Providers",
+   "path": "/leecycle/iot-sensors/providers"
+  }
+ ]
+}
