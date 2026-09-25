@@ -9,6 +9,16 @@ npm install
 npx playwright install chromium
 ```
 
+## Smoke tests
+
+`tests/login.smoke.spec.ts` checks the signed-out pages: `/login` responds, the sign-in form renders, `/` redirects to `/login`, and the Forgot Password link works. They run on Chromium, Firefox and WebKit, and in GitHub Actions on every push to `main`.
+
+```bash
+npx playwright test
+```
+
+Tests target `https://tp.leeact.io` by default. Set `BASE_URL` to point them at another environment.
+
 ## Performance scripts
 
 | Script | What it does |
