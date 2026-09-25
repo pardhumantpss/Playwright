@@ -1,0 +1,46 @@
+name: Load Test
+# Manual only: this sends real traffic to a live site. Start it from the Actions tab.
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'What to load test'
+        type: choice
+        options:
+          - login page
+          - languages API
+        default: login page
+      users:
+        description: 'Concurrent user steps, comma-separated (max 100)'
+        default: '5,10,25'
+        required: true
+      seconds:
+        description: 'Seconds per step'
+        default: '20'
+        required: true
+concurrency:
+  group: load-test
+  cancel-in-progress: false
+jobs:
+  load-test:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Run load test
+      env:
+        TARGET: ${{ inputs.target }}
+        USERS: ${{ inputs.users }}
+        SECONDS_PER_STEP: ${{ inputs.seconds }}
+      run: |
+        if [ "$TARGET" = "languages API" ]; then URL='https://tp-orchestrator.leeact.io/v1/api/languages?limit=100'; else URL='https://tp.leeact.io/login'; fi
+        node load-test.mjs "$URL" "$USERS" "$SECONDS_PER_STEP" load-results.json
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: load-test-results
+        path: load-results.json
+        retention-days: 30

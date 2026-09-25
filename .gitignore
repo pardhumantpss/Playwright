@@ -9,3 +9,7 @@ node_modules/
 
 # Saved login sessions (contain live tokens) - never commit
 .auth/
+
+# Performance test output
+/perf-results/
+/playwright-report-perf/

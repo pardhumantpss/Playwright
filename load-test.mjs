@@ -2,6 +2,12 @@
 const [target, stepsArg, durS, outFile] = process.argv.slice(2);
 const steps = stepsArg.split(',').map(Number), dur = Number(durS) * 1000;
 const fs = await import('fs');
+const MAX_VUS = 100;
+if (steps.some(v => !Number.isInteger(v) || v < 1)) { console.error('Steps must be positive whole numbers, e.g. 10,25,50'); process.exit(1); }
+if (Math.max(...steps) > MAX_VUS && process.env.ALLOW_HIGH_LOAD !== '1') {
+  console.error(`Refusing to run more than ${MAX_VUS} users against a live site. Set ALLOW_HIGH_LOAD=1 if this is approved.`);
+  process.exit(1);
+}
 const pct = (a, p) => a.length ? a[Math.min(a.length - 1, Math.floor(a.length * p))] : 0;
 const results = [];
 for (const vus of steps) {
@@ -26,4 +32,10 @@ for (const vus of steps) {
   fs.writeFileSync(outFile, JSON.stringify({ target, stepDurationS: +durS, results }, null, 1));
   if (row.errorRate > 5) { console.log('ABORT: error rate above 5%'); break; }
   await new Promise(r => setTimeout(r, 5000)); // cool-down between steps
+}
+if (process.env.GITHUB_STEP_SUMMARY) {
+  const lines = [`## Load test: ${target}`, '', `${Number(durS)} s per step`, '',
+    '| Users | Req/s | p50 | p95 | p99 | Max | Requests | Errors |', '|---:|---:|---:|---:|---:|---:|---:|---:|'];
+  for (const r of results) lines.push(`| ${r.vus} | ${r.rps} | ${r.p50} ms | ${r.p95} ms | ${r.p99} ms | ${r.max} ms | ${r.reqs} | ${r.errorRate}% |`);
+  fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n\n');
 }

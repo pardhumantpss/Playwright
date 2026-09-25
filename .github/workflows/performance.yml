@@ -1,0 +1,43 @@
+name: Performance Tests
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '30 3 * * *' # daily at 09:00 IST
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: 'Site to test'
+        default: 'https://tp.leeact.io'
+        required: true
+concurrency:
+  group: performance
+  cancel-in-progress: false
+jobs:
+  performance:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: ${{ inputs.base_url || 'https://tp.leeact.io' }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Chromium
+      run: npx playwright install --with-deps chromium
+    - name: Run performance tests
+      run: npm run test:perf
+    - name: Write results summary
+      if: ${{ !cancelled() }}
+      run: npm run perf:summary
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: performance-results
+        path: |
+          perf-results/
+          playwright-report-perf/
+        retention-days: 30
