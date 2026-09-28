@@ -11,7 +11,8 @@ test.describe('login page', () => {
 
   test('shows the sign-in form', async ({ page }) => {
     await page.goto('/login');
-    await expect(page).toHaveTitle(/Leecycle Login/);
+    // Server sends "Tp | Leeact | Login"; the app switches it to "Leecycle Login" once it boots.
+    await expect(page).toHaveTitle(/Login/);
     await expect(page.locator('input[name="email"]')).toBeVisible();
     await expect(page.locator('input[name="password"]')).toBeVisible();
     await expect(page.getByRole('button', { name: 'Sign in' })).toBeVisible();

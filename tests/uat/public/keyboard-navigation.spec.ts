@@ -36,13 +36,14 @@ test.describe('Keyboard navigation', () => {
   });
 
   test('TC-KEY-05 focused fields show a visible focus indicator', async ({ page }) => {
-    await login.email(page).focus();
-    const style = await login.email(page).evaluate(el => {
-      const s = getComputedStyle(el);
-      return { outline: s.outlineStyle !== 'none' && s.outlineWidth !== '0px', shadow: s.boxShadow !== 'none', border: s.borderColor };
+    // The ring is drawn on the field's wrapper, not the <input>.
+    const look = () => login.email(page).evaluate(el => {
+      const w = getComputedStyle(el.parentElement!);
+      return `${w.borderColor}|${w.boxShadow}|${w.outlineStyle}`;
     });
     await login.password(page).focus();
-    const blurredBorder = await login.email(page).evaluate(el => getComputedStyle(el).borderColor);
-    expect(style.outline || style.shadow || style.border !== blurredBorder, 'focus should change outline, shadow or border').toBe(true);
+    const unfocused = await look();
+    await login.email(page).focus();
+    await expect.poll(look, { message: 'focus should change the field border, ring or outline' }).not.toBe(unfocused);
   });
 });

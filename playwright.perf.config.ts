@@ -11,7 +11,8 @@ export default defineConfig({
   testDir: './tests/perf',
   fullyParallel: false,
   workers: 1,
-  retries: 0,
+  // One retry in CI: tp has had brief Cloudflare 520 outages. A real regression fails twice.
+  retries: process.env.CI ? 1 : 0,
   timeout: 300_000,
   forbidOnly: !!process.env.CI,
   reporter: process.env.CI

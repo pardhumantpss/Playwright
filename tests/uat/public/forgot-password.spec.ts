@@ -11,7 +11,9 @@ test.describe('Forgot password', () => {
     await openLogin(page);
     await login.forgotLink(page).click();
     await expect(page).toHaveURL(/\/forgot-password/);
-    await expect(page.getByText('Forgot Password', { exact: true })).toBeVisible();
+    // Occasionally the URL changes but the old page stays on screen (seen on UAT 2026-09-25 and
+    // 2026-09-28); this assertion catches that.
+    await expect(page.getByRole('heading', { name: 'Forgot Password' })).toBeVisible({ timeout: 30_000 });
   });
 
   test('TC-FP-02 shows instructions, email field, Send OTP and Back to Sign In', async ({ page }) => {
@@ -48,16 +50,18 @@ test.describe('Forgot password', () => {
     await openForgotPassword(page);
     await page.getByRole('link', { name: 'Back to Sign In' }).click();
     await expect(page).toHaveURL(/\/login/);
-    await expect(login.email(page)).toBeVisible();
+    await expect(login.email(page)).toBeVisible({ timeout: 30_000 });
   });
 
   test('TC-FP-07 known issue: page title keeps naming the page', async ({ page }) => {
-    test.fail(true, 'The server sends "Uat | Leecycle | Forgot Password", then about 3 s later the app overwrites it with "Leecycle Login". Fix: stop the client-side title override on this route.');
+    test.fail(true, 'The server sends "Uat | Leecycle | Forgot Password", then a few seconds later the app overwrites it with "Leecycle Login". Fix: stop the client-side title override on this route.');
     await openForgotPassword(page);
-    // Sample for 5 s: the override happens a few seconds after load.
-    for (let i = 0; i < 10; i++) {
+    await page.waitForLoadState('networkidle').catch(() => {});
+    // The override lands a few seconds after load (later on slow machines): sample for 10 s.
+    for (let i = 0; i < 20; i++) {
       expect(await page.title()).toMatch(/forgot|reset/i);
       await page.waitForTimeout(500);
     }
   });
+
 });

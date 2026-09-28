@@ -17,7 +17,7 @@ Tests marked **known issue** document a defect found on UAT. They pass while the
 | `tests/uat/public/route-protection.spec.ts` | signed-out visitors can't reach app screens and always land on the login page. | 11 |
 | `tests/uat/public/security-headers.spec.ts` | the site is served securely, with protective HTTP headers. | 7 |
 | `tests/uat/signed-in/add-project-form.spec.ts` | the Add Project form opens with the right fields, blocks an empty save, and cancels cleanly. | 8 |
-| `tests/uat/signed-in/all-pages-load.spec.ts` | every page reachable from the app menus opens — no 404, no crash, no server error. | 497 |
+| `tests/uat/signed-in/all-pages-load.spec.ts` | every page reachable from the app menus opens with content — no 404, no empty page, no server error. | 497 |
 | `tests/uat/signed-in/all-projects-list.spec.ts` | the All Projects list shows projects and its search, filters, columns and exports work. | 17 |
 | `tests/uat/signed-in/app-shell-navigation.spec.ts` | the app shell (top tabs, module ribbon, sidebar) takes users to the right screens. | 18 |
 | `tests/uat/signed-in/auth.setup.ts` | prepares the signed-in session that every signed-in test uses (setup step, not a test case). | 1 |
@@ -197,7 +197,7 @@ the Add Project form opens with the right fields, blocks an empty save, and canc
 
 ## signed-in/all-pages-load.spec.ts
 
-every page reachable from the app menus opens — no 404, no crash, no server error.
+every page reachable from the app menus opens with content — no 404, no empty page, no server error.
 
 | Test case | Runs on |
 |---|---|

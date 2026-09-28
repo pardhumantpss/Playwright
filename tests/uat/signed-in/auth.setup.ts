@@ -42,6 +42,10 @@ setup('prepare UAT session', async ({ browser }) => {
   await page.locator('input[name="password"]').fill(password);
   await page.getByRole('button', { name: 'Sign in' }).click();
   await expect(page).not.toHaveURL(/\/login/, { timeout: 60_000 });
+  // Save only once the app has fully started: the token lands in localStorage ('user-token')
+  // after the redirect, and saving earlier produced sessions that bounced back to /login.
+  await expect(page.getByRole('tab', { name: 'Home', exact: true })).toBeVisible({ timeout: 90_000 });
+  await expect.poll(() => page.evaluate(() => !!localStorage.getItem('user-token')), { timeout: 30_000 }).toBe(true);
   fs.mkdirSync(path.dirname(STATE), { recursive: true });
   await ctx.storageState({ path: STATE });
   await ctx.close();

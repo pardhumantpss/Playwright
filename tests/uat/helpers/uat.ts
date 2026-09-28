@@ -28,16 +28,20 @@ export async function waitForHydration(page: Page) {
   }, undefined, { timeout: 30_000 });
 }
 
+// Wait for both: handlers attached (clicks work) and the network settled. With the hydration
+// check alone, a link click inside the test runner changed the URL but left the old page shown.
 export async function openLogin(page: Page) {
   await page.goto('/login');
   await expect(login.email(page)).toBeVisible();
   await waitForHydration(page);
+  await page.waitForLoadState('networkidle').catch(() => {});
 }
 
 export async function openForgotPassword(page: Page) {
   await page.goto('/forgot-password');
   await expect(page.getByPlaceholder('Email')).toBeVisible();
   await waitForHydration(page);
+  await page.waitForLoadState('networkidle').catch(() => {});
 }
 
 /** Pages every signed-out visitor can reach. */
