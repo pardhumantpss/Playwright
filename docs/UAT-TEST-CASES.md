@@ -25,6 +25,7 @@ Tests marked **known issue** document a defect found on UAT. They pass while the
 | `tests/uat/signed-in/master-data-grid.spec.ts` | the shared master-data table (tested on Priority Master) sorts, pages, exports and opens Add. | 8 |
 | `tests/uat/signed-in/project-details-pages.spec.ts` | every Project Details section and the Workspace overview open for the selected project without errors. | 19 |
 | `tests/uat/signed-in/right-rail-panels.spec.ts` | each panel on the right-hand strip opens with its content and closes again. | 13 |
+| `tests/uat/signed-in/session-security.spec.ts` | the signed-in session token is stored and scoped safely (read from the browser; nothing is changed). | 3 |
 | `tests/uat/signed-in/signed-in-accessibility.spec.ts` | the main signed-in screens meet WCAG 2.1 AA as checked by axe-core. | 4 |
 
 ## public/accessibility.spec.ts
@@ -329,6 +330,16 @@ each panel on the right-hand strip opens with its content and closes again.
 | TC-RAIL-11 Apps panel says the feature is coming soon | signed-in |
 | TC-RAIL-12 known issue: right-hand icon buttons have accessible names | signed-in |
 
+## signed-in/session-security.spec.ts
+
+the signed-in session token is stored and scoped safely (read from the browser; nothing is changed).
+
+| Test case | Runs on |
+|---|---|
+| TC-SESS-01 session token is a JWT with issue and expiry times | signed-in |
+| TC-SESS-02 known issue: session token expires within 30 days | signed-in |
+| TC-SESS-03 session token is not placed in the page URL | signed-in |
+
 ## signed-in/signed-in-accessibility.spec.ts
 
 the main signed-in screens meet WCAG 2.1 AA as checked by axe-core.
@@ -340,4 +351,4 @@ the main signed-in screens meet WCAG 2.1 AA as checked by axe-core.
 | TC-A11Y-APP Project tasks: no new critical WCAG 2.1 AA violations | signed-in |
 | TC-A11Y-APP Priority Master: no new critical WCAG 2.1 AA violations | signed-in |
 
-**Total: 669 test cases in 20 files.**
+**Total: 672 test cases in 21 files.**

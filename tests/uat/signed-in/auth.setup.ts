@@ -49,4 +49,20 @@ setup('prepare UAT session', async ({ browser }) => {
   fs.mkdirSync(path.dirname(STATE), { recursive: true });
   await ctx.storageState({ path: STATE });
   await ctx.close();
+
+  // A brand-new session is logged out again when it is opened in another browser within about a
+  // minute of signing in (seen in CI 2026-09-28: the app loads signed in, reloads at ~4.5 s and goes
+  // to /login at ~5.5 s, with no failed API call). Wait until a fresh browser keeps the session.
+  const deadline = Date.now() + 180_000;
+  for (let attempt = 1; ; attempt++) {
+    const probe = await browser.newContext({ storageState: STATE });
+    const page2 = await probe.newPage();
+    await page2.goto('/leeact/projects/all-projects');
+    await page2.waitForTimeout(12_000);
+    const kept = !new URL(page2.url()).pathname.startsWith('/login');
+    await probe.close();
+    if (kept) { if (attempt > 1) console.warn(`New session became usable in other browsers after ${attempt} checks.`); break; }
+    if (Date.now() > deadline) throw new Error('The new UAT session keeps getting logged out in a fresh browser after 3 minutes.');
+    await new Promise(r => setTimeout(r, 15_000));
+  }
 });
