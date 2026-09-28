@@ -3,7 +3,7 @@ import { STATE, hasSession, NO_SESSION } from './app';
 
 // Signed-in tests import `test` from here: it loads the saved UAT session and skips
 // cleanly when there is none (so CI without credentials stays green).
-export const test = base.extend<{ rail: Rail; blockedWrites: string[] }>({
+export const test = base.extend<{ rail: Rail; blockedWrites: string[]; sessionWatch: void }>({
   storageState: async ({}, use) => { await use(hasSession() ? STATE : undefined); },
   // Safety net: the test account is a Super Admin, so no signed-in test may change data.
   // Any PUT/PATCH/DELETE is aborted before it leaves the browser and recorded here.
@@ -12,10 +12,28 @@ export const test = base.extend<{ rail: Rail; blockedWrites: string[] }>({
     const blocked: string[] = [];
     await context.route('**/*', route => {
       const m = route.request().method();
-      if (m === 'PUT' || m === 'PATCH' || m === 'DELETE') { blocked.push(`${m} ${route.request().url()}`); return route.abort('blockedbyclient'); }
+      if (m === 'PUT' || m === 'PATCH' || m === 'DELETE') { blocked.push(`${m} ${new URL(route.request().url()).pathname}`); return route.abort('blockedbyclient'); }
       return route.fallback();
     });
     await use(blocked);
+  }, { auto: true }],
+  // Diagnostics for sessions that end mid-test (seen in CI on first attempts after a fresh login):
+  // if a failed test finishes on /login, report a timeline of what happened before the logout.
+  sessionWatch: [async ({ page, blockedWrites }, use, testInfo) => {
+    const t0 = Date.now();
+    const events: string[] = [];
+    const at = () => `${((Date.now() - t0) / 1000).toFixed(1)}s`;
+    page.on('response', r => {
+      if (r.status() >= 400 && /orchestrator|\/api\//.test(r.url())) events.push(`${at()} ${r.status()} ${r.request().method()} ${new URL(r.url()).pathname}`);
+    });
+    page.on('framenavigated', f => { if (f === page.mainFrame()) events.push(`${at()} → ${new URL(f.url()).pathname}`); });
+    await use();
+    const loggedOut = !page.isClosed() && new URL(page.url()).pathname.startsWith('/login');
+    if (loggedOut && testInfo.status !== testInfo.expectedStatus) {
+      const token = await page.evaluate(() => !!localStorage.getItem('user-token')).catch(() => null);
+      throw new Error(`Session lost during test (attempt ${testInfo.retry + 1}). token present: ${token}. ` +
+        `Blocked writes: ${blockedWrites.join(', ') || 'none'}. Timeline: ${events.slice(-25).join(' | ') || 'no events'}`);
+    }
   }, { auto: true }],
   rail: async ({ page }, use) => { await use(new Rail(page)); },
 });

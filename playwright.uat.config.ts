@@ -22,7 +22,8 @@ export default defineConfig({
   testDir: './tests/uat',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 1 : 0,
+  // Two retries in CI: the UAT server has had moments where /login took over 60 s to load.
+  retries: process.env.CI ? 2 : 0,
   // UAT runs on a single on-premises server; more than 2 parallel browsers slows it enough to time tests out.
   workers: 2,
   timeout: 60_000,
