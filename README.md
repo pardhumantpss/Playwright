@@ -54,7 +54,10 @@ npm run test:uat:public      # signed-out tests only (no login needed)
 npm run test:uat:signed-in   # signed-in tests only
 npm run test:uat:all-pages   # opens every menu page (~500 pages, ~20 min)
 npm run uat:map-routes       # rebuild the page catalog when menus change
+node scripts/update-known-broken-pages.mjs   # after test:uat:all-pages: refresh the known broken-page list
 ```
+
+**Known broken pages.** `tests/uat/signed-in/data/known-broken-pages.json` lists menu pages that are broken on UAT, by kind: `notFound` (opens the 404 page), `empty` (no content), `serverError` (an API returns 5xx). Those pages are marked as known issues, so the page check stays green and only new breakage fails it. Once a page is fixed, its test reports "expected to fail, but passed"; rerun the script above to drop it from the list.
 
 | Folder | What it covers |
 |---|---|

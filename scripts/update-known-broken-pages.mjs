@@ -13,16 +13,20 @@ const kinds = { notFound: 'menu link opens the 404 page', empty: 'page is empty'
 
 const found = { notFound: new Set(), empty: new Set(), serverError: new Set() };
 const fixed = new Set();
+const unclassified = [];
 for (const dir of fs.existsSync(RESULTS) ? fs.readdirSync(RESULTS) : []) {
   if (!dir.includes('all-pages')) continue;
   const ctx = path.join(RESULTS, dir, 'error-context.md');
   if (!fs.existsSync(ctx)) continue;
-  const text = fs.readFileSync(ctx, 'utf8');
+  const full = fs.readFileSync(ctx, 'utf8');
+  // Only the error section: the file also contains the test source, which mentions every marker.
+  const text = full.split('# Page snapshot')[0].split('# Test source')[0];
   const name = text.split('\n').find(l => l.startsWith('- Name:')) || '';
   const p = /\((\/[^)\s]+)\)\s*$/.exec(name)?.[1];
   if (!p) continue;
   if (text.includes('Expected to fail, but passed')) { fixed.add(p); continue; }
-  for (const [kind, marker] of Object.entries(kinds)) if (text.includes(marker)) { found[kind].add(p); break; }
+  const kind = Object.keys(kinds).find(k => text.includes(kinds[k]));
+  if (kind) found[kind].add(p); else unclassified.push(`${p}: ${(/Error: .*/.exec(text) || ['?'])[0].slice(0, 120)}`);
 }
 
 const order = new Map(catalog.routes.map((r, i) => [r.path, i]));
@@ -35,4 +39,5 @@ for (const kind of Object.keys(kinds)) {
   out[kind] = sorted(new Set([...kept, ...found[kind]]));
 }
 fs.writeFileSync(OUT, JSON.stringify(out, null, 1) + '\n');
+if (unclassified.length) console.log(['Not filed (other failures, check these):', ...unclassified].join('\n  '));
 console.log(`known-broken-pages.json: ${out.notFound.length} not found, ${out.empty.length} empty, ${out.serverError.length} server error; ${fixed.size} now fixed`);
