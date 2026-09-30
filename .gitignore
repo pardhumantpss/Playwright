@@ -14,3 +14,4 @@ node_modules/
 /perf-results/
 /playwright-report-perf/
 /playwright-report-uat/
+/playwright-report-site/

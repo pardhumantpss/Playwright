@@ -1,0 +1,33 @@
+name: Site Tests
+# Tests for the public marketing site https://leeact.io.
+# Forms are never submitted: every non-GET request is blocked in the browser.
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '30 3 * * *' # daily at 09:00 IST
+  workflow_dispatch:
+concurrency:
+  group: site-tests
+  cancel-in-progress: false
+jobs:
+  site:
+    timeout-minutes: 45
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install browsers
+      run: npx playwright install --with-deps
+    - name: Run site tests
+      run: npm run test:site
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: site-report
+        path: playwright-report-site/
+        retention-days: 30

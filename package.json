@@ -14,7 +14,9 @@
     "test:uat:signed-in": "playwright test -c playwright.uat.config.ts --project=uat-setup --project=uat-signed-in",
     "test:uat:all-pages": "playwright test -c playwright.uat.config.ts --project=uat-setup --project=uat-all-pages",
     "login:uat": "node login-capture.js https://uat.leecycle.dev .auth/uat-state.json",
-    "uat:map-routes": "node scripts/uat-map-routes.js"
+    "uat:map-routes": "node scripts/uat-map-routes.js",
+    "test:site": "playwright test -c playwright.site.config.ts",
+    "test:site:chromium": "playwright test -c playwright.site.config.ts --project=site-chromium"
   },
   "keywords": [],
   "type": "commonjs",

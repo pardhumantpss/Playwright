@@ -1,6 +1,6 @@
 # Leeact Playwright
 
-Playwright tests and performance tests for https://tp.leeact.io, and functional tests for https://uat.leecycle.dev.
+Playwright tests and performance tests for https://tp.leeact.io, functional tests for https://uat.leecycle.dev, and tests for the marketing site https://leeact.io.
 
 ## Setup
 
@@ -70,6 +70,34 @@ node scripts/update-known-broken-pages.mjs   # after test:uat:all-pages: refresh
 
 **Parallel workers are limited to 2.** UAT runs on a single on-premises server, and more parallel browsers slow it enough to time tests out.
 
+## Marketing site tests (leeact.io)
+
+`tests/site/` checks the public website https://leeact.io: all 33 sitemap pages plus the sign-up page and blog tag pages (41 pages).
+
+```bash
+npm run test:site            # everything: Chromium, plus Firefox/WebKit for navigation and forms, plus a Pixel 5 phone
+npm run test:site:chromium   # desktop Chromium only
+```
+
+| File | What it checks |
+|---|---|
+| `seo.spec.ts` | robots.txt, sitemap, 404 status, and per page: 200 within 3 s, title and description (unique), canonical, one `<h1>`, indexable, Open Graph tags, valid structured data |
+| `links.spec.ts` | Every internal link opens, desktop downloads exist on GitHub, social links, no `href="#"` placeholders, dialable phone links, `target="_blank"` links use `noopener` |
+| `page-health.spec.ts` | Per page in a browser: no JavaScript errors, failed requests or broken images; alt text; no horizontal scrollbar at 1280 px; no image over 1 MB |
+| `navigation.spec.ts` | Header links, Solutions menu (11 pages), Get Started and Sign Up buttons, logo, footer (3 browsers) |
+| `forms.spec.ts` | Contact, book-a-demo, sign-up and newsletter forms reject empty and invalid input, and a rejected form records no Google Ads conversion (3 browsers) |
+| `responsive.spec.ts` | Phone menu opens and closes; every page fits a phone screen |
+| `accessibility.spec.ts` | axe-core WCAG 2.1 AA on the 8 most visited pages |
+| `security-headers.spec.ts` | HTTP → HTTPS, www → bare domain, trailing-slash redirects, security headers |
+
+**Forms are never submitted.** `tests/site/helpers/test.ts` blocks every non-GET request before it leaves the browser, so test runs send no contact messages, demo requests, sign-ups, newsletter subscriptions or analytics events. Each form test also checks that the form did not try to send anything.
+
+**Known issues** found on 2026-09-30 are listed in `tests/site/helpers/known-issues.ts` and marked `test.fail()`. Once one is fixed, Playwright reports "expected to fail, but passed": remove the page from its list.
+
+**Parallel workers are limited to 2.** Request blocking turns off the browser's HTTP cache, so every page load downloads all its images again (up to 13 MB). More browsers at once saturate the connection and time tests out. A full run takes about 17 minutes.
+
+**New pages.** `TC-SEO-03` fails when the sitemap gains or drops a page. Add or remove it in `SITEMAP_PAGES` in `tests/site/helpers/site.ts`.
+
 ## GitHub Actions
 
 | Workflow | Runs | What it does |
@@ -78,6 +106,7 @@ node scripts/update-known-broken-pages.mjs   # after test:uat:all-pages: refresh
 | Performance Tests | Every push to `main`, daily at 09:00 IST, or by hand | Performance tests; results table on the run page, report as a download |
 | Load Test | By hand only (Actions tab → Load Test → Run workflow) | Stepped load test on the login page or languages API, max 100 users |
 | UAT Tests | Every push to `main`, daily at 08:30 IST, or by hand (standard, all pages, or signed-out only) | UAT functional suite; HTML report as a download |
+| Site Tests | Every push to `main`, daily at 09:00 IST, or by hand | leeact.io marketing site suite; HTML report as a download |
 
 ## Standalone scripts
 
