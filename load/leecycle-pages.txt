@@ -1,0 +1,17 @@
+# Page mix for load-testing www.leecycle.io (one visit = one URL; weighted towards the home page)
+https://www.leecycle.io/
+https://www.leecycle.io/pricing/
+https://www.leecycle.io/
+https://www.leecycle.io/contact-us/
+https://www.leecycle.io/about-us/
+https://www.leecycle.io/
+https://www.leecycle.io/blog/
+https://www.leecycle.io/blog/zero-waste-what-waste-operators-need-to-know/
+https://www.leecycle.io/blog/the-future-of-ai-dispatch-in-waste-management/
+https://www.leecycle.io/article/the-complete-guide-to-waste-management-software/
+https://www.leecycle.io/solution/route-optimization-software-for-waste-management/
+https://www.leecycle.io/machine/tyre-recycling-machines/
+https://www.leecycle.io/patent/blockchain-for-waste-traceability/
+https://www.leecycle.io/event/
+https://www.leecycle.io/category/ai/
+https://www.leecycle.io/become-a-partner/

@@ -9,9 +9,11 @@ on:
         options:
           - login page
           - languages API
+          - leecycle.io home page
+          - leecycle.io page mix
         default: login page
       users:
-        description: 'Concurrent user steps, comma-separated (max 100)'
+        description: 'Concurrent user steps, comma-separated (max 100; leecycle.io returns 507 errors from about 20)'
         default: '5,10,25'
         required: true
       seconds:
@@ -36,7 +38,12 @@ jobs:
         USERS: ${{ inputs.users }}
         SECONDS_PER_STEP: ${{ inputs.seconds }}
       run: |
-        if [ "$TARGET" = "languages API" ]; then URL='https://tp-orchestrator.leeact.io/v1/api/languages?limit=100'; else URL='https://tp.leeact.io/login'; fi
+        case "$TARGET" in
+          "languages API") URL='https://tp-orchestrator.leeact.io/v1/api/languages?limit=100' ;;
+          "leecycle.io home page") URL='https://www.leecycle.io/' ;;
+          "leecycle.io page mix") URL='@load/leecycle-pages.txt' ;;
+          *) URL='https://tp.leeact.io/login' ;;
+        esac
         node load-test.mjs "$URL" "$USERS" "$SECONDS_PER_STEP" load-results.json
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}

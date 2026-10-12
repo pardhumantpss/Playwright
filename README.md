@@ -1,6 +1,6 @@
 # Leeact Playwright
 
-Playwright tests and performance tests for https://tp.leeact.io, functional tests for https://uat.leecycle.dev, and tests for the marketing site https://leeact.io.
+Playwright tests and performance tests for https://tp.leeact.io, functional tests for https://uat.leecycle.dev, tests for the marketing site https://leeact.io, and a load test for https://www.leecycle.io.
 
 ## Setup
 
@@ -98,13 +98,25 @@ npm run test:site:chromium   # desktop Chromium only
 
 **New pages.** `TC-SEO-03` fails when the sitemap gains or drops a page. Add or remove it in `SITEMAP_PAGES` in `tests/site/helpers/site.ts`.
 
+## Load test (www.leecycle.io)
+
+www.leecycle.io is WordPress behind Cloudflare. Cloudflare caches the images, CSS and JavaScript, but not the pages, so every page view is built by the WordPress server. `load/leecycle-pages.txt` is the page mix: 14 pages (home, pricing, contact, about, blog, article, solution, machine, patent, event, category, partner), with the home page weighted 3×.
+
+```bash
+node load-test.mjs https://www.leecycle.io/ 1,5,10,25,50 30 load-results/leecycle-home.json
+node load-test.mjs @load/leecycle-pages.txt 5,10,15,20,25 30 load-results/leecycle-mix.json
+node site-page-audit.js https://www.leecycle.io/ 3 load-results/leecycle-home-browser.json
+```
+
+The 2026-10-12 baseline: the server delivers about 10.5 pages per second at most, whichever pages are requested. From about 20 users at once (no pauses between pages) it starts returning `507 Insufficient Storage` from Apache, and at 50 users 75% of requests fail. Keep runs at 25 users or fewer unless the hosting has been upgraded, and expect the script to stop itself on errors. Results go to `load-results/` (git-ignored).
+
 ## GitHub Actions
 
 | Workflow | Runs | What it does |
 |---|---|---|
 | Playwright Tests | Every push and pull request to `main` | Smoke tests on 3 browsers |
 | Performance Tests | Every push to `main`, daily at 09:00 IST, or by hand | Performance tests; results table on the run page, report as a download |
-| Load Test | By hand only (Actions tab → Load Test → Run workflow) | Stepped load test on the login page or languages API, max 100 users |
+| Load Test | By hand only (Actions tab → Load Test → Run workflow) | Stepped load test on the tp.leeact.io login page or languages API, or the www.leecycle.io home page or page mix, max 100 users |
 | UAT Tests | Every push to `main`, daily at 08:30 IST, or by hand (standard, all pages, or signed-out only) | UAT functional suite; HTML report as a download |
 | Site Tests | Every push to `main`, daily at 09:00 IST, or by hand | leeact.io marketing site suite; HTML report as a download |
 
@@ -115,6 +127,7 @@ npm run test:site:chromium   # desktop Chromium only
 | `perf-audit.js` | One-off page load audit with raw JSON output. `node perf-audit.js https://tp.leeact.io/login 5` |
 | `perf-audit-auth.js` | The same for signed-in pages. `node perf-audit-auth.js out.json <url> [<url> ...]` |
 | `login-capture.js` | Opens a browser so you can log in yourself, then saves the session to `.auth/tp-state.json` |
-| `load-test.mjs` | Stepped load test with p50/p95/p99. Stops if errors pass 5%, refuses more than 100 users unless `ALLOW_HIGH_LOAD=1`. `node load-test.mjs https://tp.leeact.io/login 10,25,50 30 out.json` |
+| `load-test.mjs` | Stepped load test with p50/p95/p99, Cloudflare cache status and (with several URLs) results per URL. Takes one URL, a comma-separated list, or `@file` with one URL per line. Stops if errors pass 5% or p95 passes `MAX_P95_MS` (default 15000), refuses more than 100 users unless `ALLOW_HIGH_LOAD=1`. `node load-test.mjs https://tp.leeact.io/login 10,25,50 30 out.json` |
+| `site-page-audit.js` | Browser load of a public page: Web Vitals, page weight, largest files, and which requests Cloudflare did not serve from cache. `node site-page-audit.js https://www.leecycle.io/ 3 out.json` |
 
 Run load tests only against environments you own, and step up gradually.
