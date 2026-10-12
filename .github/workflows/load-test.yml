@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       target:
-        description: 'What to load test'
+        description: 'What to load test (leecycle.io blocks GitHub runners: Cloudflare challenge + Wordfence, see README)'
         type: choice
         options:
           - login page

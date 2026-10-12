@@ -109,7 +109,9 @@ node site-page-audit.js https://www.leecycle.io/ 3 load-results/leecycle-home-br
 node scripts/leecycle-report-data.mjs   # builds the report's CSV files in load-results/report/
 ```
 
-The 2026-10-12 baseline: the server delivers about 10.5 pages per second at most, whichever pages are requested. From about 20 users at once (no pauses between pages) it starts returning `507 Insufficient Storage` from Apache, and at 50 users 75% of requests fail. Keep runs at 25 users or fewer unless the hosting has been upgraded, and expect the script to stop itself on errors. Results go to `load-results/` (git-ignored). The report is https://claude.ai/artifact/W1MJAzH99uDyRnhmt72Go7: after a re-test, rebuild its CSV files with `scripts/leecycle-report-data.mjs` and replace its sources.
+The 2026-10-12 baseline: the server delivers about 10.5 pages per second at most, whichever pages are requested. From about 20 users at once (no pauses between pages) it starts returning `507 Insufficient Storage` from Apache, and at 50 users 75% of requests fail. Keep runs at 25 users or fewer unless the hosting has been upgraded, and expect the script to stop itself on errors.
+
+**Run it locally, not from GitHub Actions.** From GitHub's runners, Cloudflare answers part of the traffic with a "Just a moment..." challenge (`403`, `cf-mitigated: challenge`), and after about 10 seconds the site's Wordfence plugin blocks the runner with `503` "Your access to this site has been limited" (`retry-after: 60`). The workflow's leecycle.io targets work only once there is a Cloudflare skip rule and a Wordfence allowlist entry for the test traffic, or on a self-hosted runner whose address is already allowed. The script keeps the first error response of each status (`samples` in the JSON and the run summary), so you can see which layer refused it. Results go to `load-results/` (git-ignored). The report is https://claude.ai/artifact/W1MJAzH99uDyRnhmt72Go7: after a re-test, rebuild its CSV files with `scripts/leecycle-report-data.mjs` and replace its sources.
 
 ## GitHub Actions
 
