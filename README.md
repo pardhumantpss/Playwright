@@ -105,10 +105,11 @@ www.leecycle.io is WordPress behind Cloudflare. Cloudflare caches the images, CS
 ```bash
 node load-test.mjs https://www.leecycle.io/ 1,5,10,25,50 30 load-results/leecycle-home.json
 node load-test.mjs @load/leecycle-pages.txt 5,10,15,20,25 30 load-results/leecycle-mix.json
-node site-page-audit.js https://www.leecycle.io/ 3 load-results/leecycle-home-browser.json
+node site-page-audit.js https://www.leecycle.io/ 3 load-results/leecycle-home-browser-idle.json
+node scripts/leecycle-report-data.mjs   # builds the report's CSV files in load-results/report/
 ```
 
-The 2026-10-12 baseline: the server delivers about 10.5 pages per second at most, whichever pages are requested. From about 20 users at once (no pauses between pages) it starts returning `507 Insufficient Storage` from Apache, and at 50 users 75% of requests fail. Keep runs at 25 users or fewer unless the hosting has been upgraded, and expect the script to stop itself on errors. Results go to `load-results/` (git-ignored).
+The 2026-10-12 baseline: the server delivers about 10.5 pages per second at most, whichever pages are requested. From about 20 users at once (no pauses between pages) it starts returning `507 Insufficient Storage` from Apache, and at 50 users 75% of requests fail. Keep runs at 25 users or fewer unless the hosting has been upgraded, and expect the script to stop itself on errors. Results go to `load-results/` (git-ignored). The report is https://claude.ai/artifact/W1MJAzH99uDyRnhmt72Go7: after a re-test, rebuild its CSV files with `scripts/leecycle-report-data.mjs` and replace its sources.
 
 ## GitHub Actions
 
