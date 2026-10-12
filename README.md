@@ -113,6 +113,28 @@ The 2026-10-12 baseline: the server delivers about 10.5 pages per second at most
 
 **Run it locally, not from GitHub Actions.** From GitHub's runners, Cloudflare answers part of the traffic with a "Just a moment..." challenge (`403`, `cf-mitigated: challenge`), and after about 10 seconds the site's Wordfence plugin blocks the runner with `503` "Your access to this site has been limited" (`retry-after: 60`). The workflow's leecycle.io targets work only once there is a Cloudflare skip rule and a Wordfence allowlist entry for the test traffic, or on a self-hosted runner whose address is already allowed. The script keeps the first error response of each status (`samples` in the JSON and the run summary), so you can see which layer refused it. Results go to `load-results/` (git-ignored). The report is https://claude.ai/artifact/W1MJAzH99uDyRnhmt72Go7: after a re-test, rebuild its CSV files with `scripts/leecycle-report-data.mjs` and replace its sources.
 
+### JMeter
+
+The same test in Apache JMeter, in `jmeter/`:
+
+| File | What it is |
+|---|---|
+| `leecycle-load.jmx` | Test plan: each user requests the pages in a CSV back to back, and anything but a 200 counts as an error. Settings are `-J` properties: `host`, `pages`, `users`, `rampup`, `duration`, `think` (ms between requests), `with_css` (also fetch `common.css` with a new version on each visit, as browsers do). Open it in the JMeter GUI to edit it. |
+| `leecycle-pages.csv` | The 14-page mix (`label,path`), home page 3× |
+| `leecycle-home.csv` | Home page only |
+| `run-steps.mjs` | Runs the plan once per user step, stops when errors pass 5% or p95 passes 15 s, refuses more than 100 users unless `ALLOW_HIGH_LOAD=1`, and builds one JMeter HTML report over all steps |
+
+It needs JMeter 5.6+ and Java 17+. Set `JMETER_HOME` and `JAVA_HOME` (the script starts `ApacheJMeter.jar` itself), or put `jmeter` on `PATH`.
+
+```bash
+npm run load:jmeter -- --users 5,10,15,20,25 --seconds 30 --out load-results/jmeter/leecycle-mix
+npm run load:jmeter -- --users 5,10,20 --seconds 30 --with-css --out load-results/jmeter/leecycle-mix-with-css
+npm run load:jmeter -- --pages leecycle-home.csv --users 1,5,10,25
+node jmeter/run-steps.mjs --rebuild --out load-results/jmeter/leecycle-mix   # recompute summary and report, no traffic
+```
+
+Each run writes `summary.md`, `summary.json`, one `results.jtl` per step and the HTML report at `report/index.html`. The 2026-10-12 JMeter run agreed with the Node test: 9.0–10.3 pages a second from 5 to 25 users, and 5 of 307 requests (`507`) failing at 25 users. With `common.css` on every visit the page ceiling stayed at about 10 a second, and each `common.css` request took a median 0.5–0.6 s.
+
 ## GitHub Actions
 
 | Workflow | Runs | What it does |
@@ -131,6 +153,7 @@ The 2026-10-12 baseline: the server delivers about 10.5 pages per second at most
 | `perf-audit-auth.js` | The same for signed-in pages. `node perf-audit-auth.js out.json <url> [<url> ...]` |
 | `login-capture.js` | Opens a browser so you can log in yourself, then saves the session to `.auth/tp-state.json` |
 | `load-test.mjs` | Stepped load test with p50/p95/p99, Cloudflare cache status and (with several URLs) results per URL. Takes one URL, a comma-separated list, or `@file` with one URL per line. Stops if errors pass 5% or p95 passes `MAX_P95_MS` (default 15000), refuses more than 100 users unless `ALLOW_HIGH_LOAD=1`. `node load-test.mjs https://tp.leeact.io/login 10,25,50 30 out.json` |
+| `jmeter/run-steps.mjs` | Stepped JMeter load test with `jmeter/leecycle-load.jmx`; see [JMeter](#jmeter). `npm run load:jmeter -- --users 5,10,25` |
 | `site-page-audit.js` | Browser load of a public page: Web Vitals, page weight, largest files, and which requests Cloudflare did not serve from cache. `node site-page-audit.js https://www.leecycle.io/ 3 out.json` |
 
 Run load tests only against environments you own, and step up gradually.

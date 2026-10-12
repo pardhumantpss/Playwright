@@ -16,3 +16,6 @@ node_modules/
 /playwright-report-perf/
 /playwright-report-uat/
 /playwright-report-site/
+
+# JMeter log when the GUI or jmeter is run from the repo folder
+jmeter.log

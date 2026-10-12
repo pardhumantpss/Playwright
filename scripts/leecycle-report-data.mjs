@@ -1,6 +1,7 @@
 // Builds the data files for the www.leecycle.io load test report from the runs in load-results/.
 // node scripts/leecycle-report-data.mjs [load-results] [out-dir]
-// Writes steps.csv, timeline.csv, browser.csv and largest-files.csv. Upload them to the report's sources.
+// Writes steps.csv (with JMeter's run when load-results/jmeter/leecycle-mix exists), timeline.csv, browser.csv and
+// largest-files.csv. Upload them to the report's sources.
 import fs from 'fs';
 import path from 'path';
 
@@ -31,6 +32,13 @@ for (const [run, file] of runs) {
       p50Ms: r.p50, p95Ms: r.p95, p99Ms: r.p99, maxMs: r.max, requests: r.reqs + r.netErrors, failed: r.reqs + r.netErrors - ok, errorRatePct: r.errorRate });
     for (const t of r.timeline) if (t.s < j.stepDurationS) timeline.push({ run, users: r.vus, second: t.s, pagesPerSec: t.rps, p95Ms: t.p95 });
   }
+}
+// JMeter's run of the same page mix (jmeter/run-steps.mjs), when there is one
+const jm = path.join(dir, 'jmeter', 'leecycle-mix', 'summary.json');
+if (fs.existsSync(jm)) {
+  const j = JSON.parse(fs.readFileSync(jm, 'utf8'));
+  for (const r of j.results) steps.push({ run: 'JMeter: page mix', users: r.vus, seconds: j.seconds, pagesPerSec: r.rps, okPagesPerSec: r.okPerSec,
+    p50Ms: r.p50, p95Ms: r.p95, p99Ms: r.p99, maxMs: r.max, requests: r.samples, failed: r.failed, errorRatePct: r.errorRate });
 }
 fs.writeFileSync(path.join(out, 'steps.csv'), csv(steps));
 fs.writeFileSync(path.join(out, 'timeline.csv'), csv(timeline));
